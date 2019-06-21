@@ -152,7 +152,7 @@
 
             ​
 
-- 2017-06-08 
+- 2017-06-08
 
   新增文档
 
@@ -160,13 +160,13 @@
 
 # API概述
 
- 	靠谱云向用户开放所有资源操作相关的API，我们的API是通过HTTP GET/POST方式来进行调用的。在调用我们的API之前，您需要先联系我们获取API密钥ID(AccessKeyId)和API密钥的私钥(AccessKeySecret)。API密钥ID将作为参数包含在每一个请求中发送；而API密钥的私钥负责生成请求串的签名，API密钥的私钥需要被妥善保管，请勿外传。
+ 	xx云向用户开放所有资源操作相关的API，我们的API是通过HTTP GET/POST方式来进行调用的。在调用我们的API之前，您需要先联系我们获取API密钥ID(AccessKeyId)和API密钥的私钥(AccessKeySecret)。API密钥ID将作为参数包含在每一个请求中发送；而API密钥的私钥负责生成请求串的签名，API密钥的私钥需要被妥善保管，请勿外传。
 
-## 1、服务地址  
+## 1、服务地址
 
-  	靠谱云API服务接入地址：http://antiddos.api.kaopuyun.com 。
+  	xx云API服务接入地址：http://antiddos.api.kaopuyun.com 。
 
-## 2、通信协议  
+## 2、通信协议
 
   	支持通过 HTTP 通道进行请求通信。
 
@@ -197,7 +197,7 @@
 | 参数名            | 必选   | 类型     | 说明                                       |
 | :------------- | :--- | :----- | ---------------------------------------- |
 | Version        | 是    | string | API版本号，当前版本为:2                           |
-| AccessKeyId    | 是    | string | 靠谱云颁发给用户的访问服务所用的密钥 ID                    |
+| AccessKeyId    | 是    | string | xx云颁发给用户的访问服务所用的密钥 ID                    |
 | Signature      | 是    | string | 签名结果串，请参见签名机制                            |
 | Timestamp      | 是    | string | 请求的时间戳，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 | SignatureNonce | 是    | string | 唯一随机数，用于防止网络重放攻击。用户在不同请求间要使用不同的随机数值      |
@@ -463,7 +463,7 @@ https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs
 
 查看可用与设置的防护组信息。
 
- 
+
 
 #### 请求参数
 
@@ -474,7 +474,7 @@ https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs
 | Zone         | String |  否   | 可用区                                      |
 | BandwithType | String |  否   | 线路类型:  <br>AntiBGP---高防BGP<br>AntiCTC---高防电信<br>SuperAntiBGP---超防BGP<br>SuperAntiCTC---超防电信 |
 
- 
+
 
 #### 返回参数
 
@@ -482,7 +482,7 @@ https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs
 | ---------------- | ----------------------- | ------------------------------- |
 | ProtectGroupInfo | ProtectGroupDataSetType | 防护组信息ProtectGroupDataSetType的集合 |
 
- 
+
 
 #### 类型说明
 
@@ -497,7 +497,7 @@ ProtectGroupDataSetType节点说明
 | ProtectGroupName | String | 防护组名称    |
 | BlackHoleValue   | int    | 黑洞阈值，单位G |
 
- 
+
 
 #### 错误码
 
@@ -520,7 +520,7 @@ ProtectGroupDataSetType节点说明
             "BlackHoleValue":"200",
             "ProtectGroupID":"superantictc_200g",
             "ProtectGroupName":"超防电信_200G",
-            "Regio":"靠谱云福州4区",
+            "Regio":"xx云福州4区",
             "Zone":"cn-fuzhou-4-a"
         },
 
@@ -532,7 +532,7 @@ ProtectGroupDataSetType节点说明
             "BlackHoleValue":"400",
             "ProtectGroupID":"superantictc_400g",
             "ProtectGroupName":"超防电信_400G",
-            "Regio":"靠谱云福州4区",
+            "Regio":"xx云福州4区",
             "Zone":"cn-fuzhou-4-a"
         }
     ],
@@ -552,7 +552,7 @@ ProtectGroupDataSetType节点说明
 
 添加指定IP到指定防护组，一个IP只能加入一个防护组。
 
- 
+
 
 #### 请求参数
 
@@ -567,7 +567,7 @@ ProtectGroupDataSetType节点说明
 | Zone                    | String |  是   | 可用区                                      |
 | BandwithType            | String |  是   | 线路类型:  <br>AntiBGP---高防BGP<br>AntiTele---高防电信<br>SuperAntiBGP---超防BGP<br>SuperAntiTele---超防电信 |
 
- 
+
 
 #### 返回参数
 
@@ -592,7 +592,7 @@ ProtectGroupDataSetType节点说明
 | ZoneNotExit          | Zone Type is not exist                   | 9402    | 指定的可用区不存在      |
 | BandwithTypeNotExit  | Bandwith Type is not exist               | 9402    | 指定的带宽类型不存在     |
 
- 
+
 
 #### 返回示例
 
@@ -608,7 +608,7 @@ ProtectGroupDataSetType节点说明
 
 获取高防IP的防护组信息。
 
- 
+
 
 #### 请求参数
 
@@ -618,7 +618,7 @@ ProtectGroupDataSetType节点说明
 | IP       | String |  否   | IP地址，支持批量IP，多个IP用逗号（半角）分隔；若参数为空，默认返回所有IP的数据 |
 | IPUserID | String |  否   | IP地址隶属的二级用户ID                            |
 
- 
+
 
 #### 返回参数
 
@@ -626,7 +626,7 @@ ProtectGroupDataSetType节点说明
 | ---------------- | ----------------------- | ------------------------------- |
 | ProtectGroupInfo | ProtectGroupDataSetType | 防护组信息ProtectGroupDataSetType的集合 |
 
- 
+
 
 #### 类型说明
 
@@ -645,7 +645,7 @@ ProtectGroupDataSetType节点说明
 | Package          | String                  | IP所属服务包ID，若不属于包，则为空                      |
 | Status           | String                  | IP当前使用状态：<br>Open—在用<br>Close---关闭       |
 
- 
+
 
 ProtectGroupTypeSetData节点说明
 
@@ -655,7 +655,7 @@ ProtectGroupTypeSetData节点说明
 | ProtectGroupID   | String | 防护组ID，唯一 |
 | ProtectGroupName | String | 防护组名称    |
 
- 
+
 
 #### 错误码
 
@@ -671,7 +671,7 @@ ProtectGroupTypeSetData节点说明
     "Message":"Success",
     "ProtectGroupInfo":
     [
-        
+
         {
             "BandwithType":"高防BGP",
             "CloseTimeStamp":"2017-12-05T08:03:15Z",
@@ -695,7 +695,7 @@ ProtectGroupTypeSetData节点说明
             "Zone":"",
             "ip":"10.2.2.3"
         },
-        
+
         {
             "BandwithType":"高防BGP",
             "CloseTimeStamp":"",
@@ -714,7 +714,7 @@ ProtectGroupTypeSetData节点说明
             "IPUserID":"da",
             "OpenTimeStamp":"2017-12-05T08:18:43Z",
             "Package":"",
-            "Region":"靠谱云福州4区",
+            "Region":"xx云福州4区",
             "Status":"open",
             "Zone":"cn-fuzhou-4-a",
             "ip":"10.2.2.5"
@@ -746,7 +746,7 @@ ProtectGroupTypeSetData节点说明
 | IP       | String |  否   | IP地址，支持批量IP，多个IP用逗号（半角）分隔；若参数为空，默认返回所有IP的数据 |
 | IPUserID | String |  否   | IP地址隶属的二级用户ID                            |
 
- 
+
 
 #### 返回参数
 
@@ -754,7 +754,7 @@ ProtectGroupTypeSetData节点说明
 | ------------ | -------------- | ------- |
 | IPStatusData | IPStatusData[] | IP状态数据集 |
 
- 
+
 
 #### 类型说明
 
@@ -770,7 +770,7 @@ IPStatusData节点说明
 | StartTime          | String | 进入黑洞的时间，仅当黑洞状态时该值有效，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 | EndTime            | String | 结束黑洞的时间，仅当黑洞状态时该值有效，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 
- 
+
 
 #### 错误码
 
@@ -851,7 +851,7 @@ IPStatusData节点说明
 | Zone                    | String |  是   | 可用区                                      |
 | BandwithType            | String |  是   | 线路类型:  <br>AntiBGP---高防BGP<br>AntiTele---高防电信<br>SuperAntiBGP---超防BGP<br>SuperAntiTele---超防电信 |
 
- 
+
 
 #### 返回参数
 
@@ -905,7 +905,7 @@ IPStatusData节点说明
 | IP       | String | 是    | IP地址                             |
 | IPUserID | String | 否    | IP地址隶属的二级用户ID                    |
 
- 
+
 
 #### 返回参数
 
@@ -951,7 +951,7 @@ IPStatusData节点说明
 
 开启IP的弹性流量服务。
 
- 
+
 
 #### 请求参数
 
@@ -961,7 +961,7 @@ IPStatusData节点说明
 | IP       | String | 是    | IP地址                            |
 | IPUserID | String | 否    | IP地址隶属的二级用户ID                   |
 
- 
+
 
 #### 返回参数
 
@@ -1017,7 +1017,7 @@ IPStatusData节点说明
 | IP       | String | 是    | IP地址                      |
 | IPUserID | String | 否    | IP地址隶属的二级用户ID             |
 
- 
+
 
 #### 返回参数
 
@@ -1049,7 +1049,7 @@ IPStatusData节点说明
 }
 ```
 
- 
+
 
 ### 9.开启高防IP防护
 
@@ -1059,7 +1059,7 @@ IPStatusData节点说明
 
 开启高防IP的防护，将其防护状态调整为最近一次关闭高防防护之前的状态。
 
- 
+
 
 #### 请求参数
 
@@ -1070,7 +1070,7 @@ IPStatusData节点说明
 | IPUserID      | String  | 否    | IP地址隶属的二级用户ID             |
 | ElasticEnable | Boolean | 是    | True:开启弹性流量 False:不开启弹性流量 |
 
- 
+
 
 #### 返回参数
 
@@ -1112,7 +1112,7 @@ IPStatusData节点说明
 
 将指定IP从防护组中删除。
 
- 
+
 
 #### 请求参数
 
@@ -1122,7 +1122,7 @@ IPStatusData节点说明
 | IP       | String | 是    | IP地址                           |
 | IPUserID | String | 否    | IP地址隶属的二级用户ID                  |
 
- 
+
 
 #### 返回参数
 
@@ -1143,7 +1143,7 @@ IPStatusData节点说明
 | IPError    | IP is not exit. | 9403    | 没有权限查看该IP的信息        |
 | CommitFail | Commit Fail     | 9408    | 提交修改失败, 请联系运维人员线下修改 |
 
- 
+
 
 #### 返回示例
 
@@ -1222,7 +1222,7 @@ IPMonitorDataSetType节点参数说明
 | PPS_MAX   | Integer | 相应时间精度内,pps最大值                           |
 | TimeStamp | String  | 数据对应的时间点，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 
- 
+
 
 #### 错误码
 
@@ -1368,7 +1368,7 @@ IPMonitorDataSetType节点参数说明
 | ---------------- | ------------------------- | ------------ |
 | IPMaxMonitorData | IPMaxMonitorDataSetType[] | 带宽峰值的峰值与黑洞次数 |
 
- 
+
 
 #### 类型说明
 
@@ -1379,7 +1379,7 @@ IPMonitorDataSetType节点参数说明
 | PPS_MAX        | Integer | 相应时间精度内，PPS峰值                            |
 | BlackHoleTimes | Integer | 查询时间段内，IP为高防IP（非处于服务包期间）的黑洞次数，若传递参数PackageID，则为在服务包内的黑洞次数 |
 
- 
+
 
 #### 错误码
 
@@ -1394,7 +1394,7 @@ IPMonitorDataSetType节点参数说明
     "Code":200,
     "IPMaxMonitorData":
     [
-        
+
         {
             "BlackHoleTimes":0,
             "IP":"45.126.120.122",
@@ -1402,7 +1402,7 @@ IPMonitorDataSetType节点参数说明
             "PPS_MAX":0,
             "TimeStamp":"2017-10-31T05:50:00"
         },
-        
+
         {
             "BlackHoleTimes":0,
             "IP":"10.1.1.88",
@@ -1450,7 +1450,7 @@ IPMonitorDataSetType节点参数说明
 | Protocol | String |  是   | 接入协议:  TCP                               |
 | SourceIP | String |  是   | 单个的源站IP，如果包含端口号，IP和端口号之间用冒号连接，如：10.1.1.1:3306 |
 
- 
+
 
 #### 返回参数
 
@@ -1522,7 +1522,7 @@ IPMonitorDataSetType节点参数说明
 | Protocol | String |  是   | 接入协议:  TCP                               |
 | SourceIP | String |  是   | 单个的源站IP，如果包含端口号，IP和端口号之间用冒号连接，如：10.1.1.1:3306 |
 
- 
+
 
 #### 返回参数
 
@@ -1631,7 +1631,7 @@ IPMonitorDataSetType节点参数说明
 | Port       | String | 是    | 端口号，默认情况下HTTP端口号80，HTTPS端口号443           |
 | SourceIPs  | String | 是    | 源站IP，多个IP之间用逗号分隔，如果包含端口号，IP和端口号之间用冒号连接，如：10.1.1.1:80,10.1.1.2:80 |
 
- 
+
 
 #### 返回参数
 
@@ -1712,7 +1712,7 @@ IPMonitorDataSetType节点参数说明
 | Port       | String | 是    | 端口号，默认情况下HTTP端口号80，HTTPS端口号443           |
 | SourceIPs  | String | 是    | 源站IP，多个IP之间用逗号分隔，如果包含端口号，IP和端口号之间用冒号连接，如：10.1.1.1:80,10.1.1.2:80 |
 
- 
+
 
 #### 返回参数
 
@@ -1858,7 +1858,7 @@ IPLineMonitorDataSetType节点参数说明
 | PPS_MAX   | Integer | 5分钟内,pps最大值                              |
 | TimeStamp | String  | 数据对应的时间点，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 
- 
+
 
 #### 错误码
 
@@ -1941,7 +1941,7 @@ IPLineMonitorDataSetType节点参数说明
 | StartTime | String |  是   | 获取数据的起始时间点，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 | EndTime   | String |  是   | 获取数据的起始时间点，日期和时间合并表示时，采用UTC时间，遵循ISO 8601，在两者中间加大写字母T，在时间之后加大写字母Z，例如2017-06-01T23:00:10Z表示UTC时间2017年6月1日23点0分10秒 |
 
- 
+
 
 #### 返回参数
 
@@ -1949,7 +1949,7 @@ IPLineMonitorDataSetType节点参数说明
 | ---------------- | ------------------ | ------- |
 | IPMetricInfoData | IPMetricInfoData[] | 预警信息数据集 |
 
- 
+
 
 #### 类型说明
 
@@ -1968,7 +1968,7 @@ IPMetricInfoData节点说明
 | Msg       | String | 预警信息                                     |
 | Code(弃用)  | String | 预警代码，以逗号分隔的关于预警信息的关键信息的描述,四个字段，分别表示：预警信息类别,预警阈值类别,预警阈值比例（百分比）,线路，例如：<br>BPS,SYS,100,CNC—BPS带宽流量预警,系统阈值,100%,CNC联通线路<br>BPS,GUARANTEE,100,TOTAL—BPS带宽流量预警,保底阈值,100%,所有线路合并<br>BPS,ELASTIC,80,TOTAL—BPS带宽流量预警,弹性阈值,80%,所有线路合并 |
 
- 
+
 
 #### 错误码
 
@@ -2026,7 +2026,7 @@ IPMetricInfoData节点说明
 | Hostname | String |  是   | 可输入需要查询的域名                           |
 | IPUserID | String |  否   | IP地址隶属的二级用户ID                        |
 
- 
+
 
 #### 返回参数说明
 
@@ -2079,7 +2079,7 @@ IPMetricInfoData节点说明
 | Hostname | String |  是   | 可输入需要查询的IP                         |
 | IPUserID | String |  否   | IP地址隶属的二级用户ID                      |
 
- 
+
 
 #### 返回参数说明
 
@@ -2378,26 +2378,26 @@ IPMetricInfoData节点说明
 {
     "BlockListData":
     [
-        
+
         {
             "ctc":
             {
                 "27.148.157.86-61.88.231.148":"2842"
             }
         },
-        
+
         {
             "cmcc":
             {
             }
         },
-        
+
         {
             "cnc":
             {
             }
         },
-        
+
         {
             "new":
             {
@@ -2652,7 +2652,7 @@ DescribeIPFirewallProtectData返回参数说明
     "Code":200,
     "IPBlockHoleData":
     [
-        
+
         {
             "ban_time":"00:20:00",
             "createdt":"2017-11-14-T11:30:43Z",
@@ -2663,7 +2663,7 @@ DescribeIPFirewallProtectData返回参数说明
             "line":"ctc",
             "threshold_value":100000000000
         },
-        
+
         {
             "ban_time":"00:20:00",
             "createdt":"2017-11-14-T11:11:59Z",
@@ -2674,7 +2674,7 @@ DescribeIPFirewallProtectData返回参数说明
             "line":"ctc",
             "threshold_value":100000000000
         },
-        
+
         {
             "ban_time":"00:20:00",
             "createdt":"2017-11-14-T11:11:54Z",
@@ -2685,7 +2685,7 @@ DescribeIPFirewallProtectData返回参数说明
             "line":"cnc",
             "threshold_value":70000000000
         },
-        
+
         {
             "ban_time":"00:20:00",
             "createdt":"2017-11-14-T11:11:56Z",
@@ -2810,7 +2810,7 @@ DescribeIPFirewallProtectData返回参数说明
     "Message":"Success",
     "ProtectPackageInfo":
     [
-        
+
         {
             "CloseTimeStamp":,
             "DueTime":"2017-12-05T02:49:11Z",
@@ -2825,7 +2825,7 @@ DescribeIPFirewallProtectData返回参数说明
             "ProtectStatus":"Elastic",
             "Status":"open"
         },
-        
+
         {
             "CloseTimeStamp":,
             "DueTime":"2017-12-06T02:17:49Z",
@@ -3202,11 +3202,11 @@ DescribeIPFirewallProtectData返回参数说明
     "Code":200,
     "IPDataInfo":
     [
-        
+
         {
             "MonitorData":
             [
-                
+
                 {
                     "KBPS":5505,
                     "KBPS_MAX":5505,
@@ -3214,8 +3214,8 @@ DescribeIPFirewallProtectData返回参数说明
                     "PPS_MAX":8192,
                     "TimeStamp":"2017-10-27T09:15:00Z"
                 },
-              
-                
+
+
                 {
                     "KBPS":944,
                     "KBPS_MAX":944,
@@ -3223,7 +3223,7 @@ DescribeIPFirewallProtectData返回参数说明
                     "PPS_MAX":1000,
                     "TimeStamp":"2017-10-27T12:30:00Z"
                 },
-                
+
                 {
                     "KBPS":552,
                     "KBPS_MAX":688,
@@ -3231,7 +3231,7 @@ DescribeIPFirewallProtectData返回参数说明
                     "PPS_MAX":1000,
                     "TimeStamp":"2017-10-27T13:45:00Z"
                 },
-                
+
                 {
                     "KBPS":528,
                     "KBPS_MAX":528,
@@ -3242,7 +3242,7 @@ DescribeIPFirewallProtectData返回参数说明
             ],
             "MonitorDataMax":
             [
-                
+
                 {
                     "KBPS":528,
                     "KBPS_MAX":528,
@@ -3367,7 +3367,7 @@ DescribeIPFirewallProtectData返回参数说明
     "Code":200,
     "IPBlackHoleData":
     [
-        
+
         {
     		"IP":"125.77.29.221",
     		"IPState":"BlackHole",
@@ -3447,7 +3447,7 @@ DescribeIPFirewallProtectData返回参数说明
     "Code":200,
     "DataSet":
     [
-        
+
         {
             "BlackHoleTimes":0,
             "IP":"45.126.122.174",

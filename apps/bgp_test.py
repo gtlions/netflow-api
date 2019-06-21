@@ -15,9 +15,9 @@ class apitest():
             # "AccessKeyId": "hsefbawrfg",  #金山
             "AccessKeyId": "dev1",  # 开发账户1
             # "AccessKeyId": "dev2",  #开发账户2
-            # "AccessKeyId": "con1",  # 靠谱云开发账户
-            # "AccessKeyId": "pan1",  # 靠谱云开发账户
-            # "AccessKeyId": "kpyglpt",  # 靠谱云生产账户
+            # "AccessKeyId": "con1",  # xx云开发账户
+            # "AccessKeyId": "pan1",  # xx云开发账户
+            # "AccessKeyId": "kpyglpt",  # xx云生产账户
             # "AccessKeyId": "afegxgu0VdR5fT7K",  # 系统
             # "AccessKeyId": "kpyxianxia",  # 线下
             "Timestamp": "2018-06-14T03:30:00Z",
@@ -33,7 +33,7 @@ class apitest():
         self.AccessKeySecret = 'dev1gdfdihfcd9cdfh'  # 开发账户1
         # self.AccessKeySecret = 'pan1gd9cdfh'  # 开发账户1
         # self.AccessKeySecret = 'dev2gdfdihfcd9cdfh'   #开发账户2
-        # self.AccessKeySecret = 'con1gd9cdfh'  # 靠谱云开发账户
+        # self.AccessKeySecret = 'con1gd9cdfh'  # xx云开发账户
         # self.AccessKeySecret = 'fdl342kjdfsljqkaqpdfaldhkkfasl93'#cdn
         # self.AccessKeySecret = 'xiddfgJDansKdfAdf'  # 线下
 
