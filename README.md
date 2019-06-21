@@ -8,4 +8,4 @@
 > - apps/includes/api_bgp   高防模块
 
 
-![API接口文档](/Doc/AntiDDosAPI文档.md)
+[API接口文档](/Doc/AntiDDosAPI文档.md)
