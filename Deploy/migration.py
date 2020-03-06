@@ -17,9 +17,9 @@ class CTCFastNetMon():
     bgpmax = ['bgpmax_ctc', 600]
     superctcmax = ['superctcmax_ctc', 600]
     superbgpmax = ['superbgpmax_ctc', 600]
-    fastmon_blackhole_list = 'http://ddosanti-ctc-inc.kaopuyun.com/fnm/api/blackhole'
-    fastmon_hostgroup = 'http://ddosanti-ctc-inc.kaopuyun.com/fnm/api/hostgroup'
-    fastmon_commit = 'http://ddosanti-ctc-inc.kaopuyun.com/fnm/api/commit'
+    fastmon_blackhole_list = 'http://ddosanti-ctc-inc.youdomain.com/fnm/api/blackhole'
+    fastmon_hostgroup = 'http://ddosanti-ctc-inc.youdomain.com/fnm/api/hostgroup'
+    fastmon_commit = 'http://ddosanti-ctc-inc.youdomain.com/fnm/api/commit'
 
 
 class CMCCFastNetMon():

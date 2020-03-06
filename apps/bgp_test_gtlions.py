@@ -21,8 +21,8 @@ class apiText():
 
         self.AccessKeySecret = ackseckey
         self.local_url = 'http://127.0.0.1:8000'
-        self.dev_url = 'http://antiddos.api-test.kaopuyun.com:8000'
-        self.prod_url = 'http://antiddos.api.kaopuyun.com'
+        self.dev_url = 'http://antiddos.api-test.youdomain.com:8000'
+        self.prod_url = 'http://antiddos.api.youdomain.com'
 
     def sign_request(self, parame):
         hashed = hmac.new(self.AccessKeySecret.encode('utf-8'), parame.encode('utf-8'), digestmod=sha1)
@@ -65,7 +65,7 @@ def runTest(ip, ackid, ackseckey):
     client = apiText(ip, ackid, ackseckey)
     client.run()
     # print((requests.get(
-        # 'http://antiddos.api-test.kaopuyun.com:8000/ip?Action=DescribeIPMonitorData&EndTime=2017-10-30T21:03:00Z&SignatureNonce=cc58bb01-0144-4a90-928e-15f3014e52bc&Version=2&AccessKeyId=con1&IP=125.77.25.125,125.77.25.123,36.248.12.61,125.77.25.117,36.248.12.60&Signature=NyiztPSXoU4EZfrqGEDpBVMaHhQ=&StartTime=2017-10-30T21:00:00Z&Timestamp=2017-10-30T01:50:50Z')))
+        # 'http://antiddos.api-test.youdomain.com:8000/ip?Action=DescribeIPMonitorData&EndTime=2017-10-30T21:03:00Z&SignatureNonce=cc58bb01-0144-4a90-928e-15f3014e52bc&Version=2&AccessKeyId=con1&IP=125.77.25.125,125.77.25.123,36.248.12.61,125.77.25.117,36.248.12.60&Signature=NyiztPSXoU4EZfrqGEDpBVMaHhQ=&StartTime=2017-10-30T21:00:00Z&Timestamp=2017-10-30T01:50:50Z')))
 if __name__ == '__main__':
     import psycopg2
     import threading

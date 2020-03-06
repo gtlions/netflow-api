@@ -164,7 +164,7 @@
 
 ## 1、服务地址
 
-  	xx云API服务接入地址：http://antiddos.api.kaopuyun.com 。
+  	xx云API服务接入地址：http://antiddos.api.youdomain.com 。
 
 ## 2、通信协议
 
@@ -242,9 +242,9 @@ AccessKeySecret= "b2cd9c1319ea16ec3c5e1f3fee1432b3"
 ```
 AccessKeyId=afegxgu0VdR5fT7K
 Version=2
-Dirs=["http://www.kaopuyun.com/buy/"]
+Dirs=["http://www.youdomain.com/buy/"]
 SignatureNonce=asd
-Urls=["http://www.kaopuyun.com","http://www.kaopuyun.com/buy/cloud_server"]
+Urls=["http://www.youdomain.com","http://www.youdomain.com/buy/cloud_server"]
 Action=CdnRefresh
 Timestamp=2015-08-25T11:11:11Z
 ```
@@ -261,10 +261,10 @@ Timestamp=2015-08-25T11:11:11Z
 ```
 AccessKeyId=afegxgu0VdR5fT7K
 Action=CdnRefresh  
-Dirs=["http://www.kaopuyun.com/buy/"]   
+Dirs=["http://www.youdomain.com/buy/"]   
 SignatureNonce=asd  
 Timestamp=2015-08-25T11:11:11Z 
-Urls=["http://www.kaopuyun.com","http://www.kaopuyun.com/buy/cloud_server"]    
+Urls=["http://www.youdomain.com","http://www.youdomain.com/buy/cloud_server"]    
 Version:1
 ```
 
@@ -276,10 +276,10 @@ Version:1
 ```
 AccessKeyId=afegxgu0VdR5fT7K
 Action=CdnRefresh
-Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D
+Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D
 SignatureNonce=asd
 Timestamp=2015-08-25T11%3A11%3A11Z
-Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D
+Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D
 Version=2
 ```
 
@@ -289,7 +289,7 @@ Version=2
 
 ​    参数名和参数值之间用 “=” 号连接，参数和参数之间用 “＆” 号连接，注意不包括Signature参数，构造后的URL请求为：
 ```
-AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D&Version=1
+AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D&Version=1
 ```
 
 
@@ -299,7 +299,7 @@ AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.kaopu
 ​    被签名串的构造规则为: 被签名串 = HTTP请求方式  + '&' + uri  + '&' + URL请求串。示例使用的cdn刷新接口，uri是/cdn，请求方式采用GET。
 
 ```
-GET&/cdn&AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D&Version=1
+GET&/cdn&AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D&Version=1
 ```
 
 
@@ -318,19 +318,19 @@ GET&/cdn&AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2F
 ​    将签名参数附在原有请求串的最后面，进行URL编码后得到最终的请求串 
 
 ```
-AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D&Version=1&Signature=darDvDsR9igfiZ2f6q%2F9sWzIY0k%3D
+AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D&Version=1&Signature=darDvDsR9igfiZ2f6q%2F9sWzIY0k%3D
 ```
 
 
 ​    完整的请求URL为(为了查看方便，我们人为地将参数之间用回车分隔开)
 
 ```
-https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K 
+https://api.youdomain.com/cdn?AccessKeyId=afegxgu0VdR5fT7K 
 &Action=CdnRefresh
-&Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D 
+&Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D 
 &SignatureNonce=asd
 &Timestamp=2015-08-25T11%3A11%3A11Z
-&Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D 
+&Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D 
 &Version=2
 &Signature=darDvDsR9igfiZ2f6q%2F9sWzIY0k%3D
 ```
@@ -339,7 +339,7 @@ https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K 
 ​    实际URL为
 
 ```
-https://api.kaopuyun.com/cdn?AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.kaopuyun.com%22%2C%22http%3A%2F%2Fwww.kaopuyun.com%2Fbuy%2Fcloud_server%22%5D&Version=2&Signature=darDvDsR9igfiZ2f6q%2F9sWzIY0k%3D
+https://api.youdomain.com/cdn?AccessKeyId=afegxgu0VdR5fT7K&Action=CdnRefresh&Dirs=%5B%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2F%22%5D&SignatureNonce=asd&Timestamp=2015-08-25T11%3A11%3A11Z&Urls=%5B%22http%3A%2F%2Fwww.youdomain.com%22%2C%22http%3A%2F%2Fwww.youdomain.com%2Fbuy%2Fcloud_server%22%5D&Version=2&Signature=darDvDsR9igfiZ2f6q%2F9sWzIY0k%3D
 ```
 
 
@@ -1614,7 +1614,7 @@ IPMonitorDataSetType节点参数说明
 | Action   | String                 | 是    | 系统规定参数，取值： CreateIPSevenLayerAntiConfig  |
 | IP       | String                 | 是    | 高防IP地址                                   |
 | IPUserID | String                 | 否    | IP地址隶属的二级用户ID                            |
-| Configs  | SevenLayerAntiConfig[] | 是    | 七层防护配置，字符串内包含键值对的配置信息，并且需要转义，转义方法同URL，配置示例：<br>"[{'Type':'Site','Domain':'antiddos.api-test.kaopuyun.com','Cname':'antiddos.api-test.kaopuyun.com','Protocol':'Http', 'PublicKey':'PublicKey','PrivateKey':'PrivateKey','Port':'80','SourceIPs':'10.1.1.1:8000'}]" |
+| Configs  | SevenLayerAntiConfig[] | 是    | 七层防护配置，字符串内包含键值对的配置信息，并且需要转义，转义方法同URL，配置示例：<br>"[{'Type':'Site','Domain':'antiddos.api-test.youdomain.com','Cname':'antiddos.api-test.youdomain.com','Protocol':'Http', 'PublicKey':'PublicKey','PrivateKey':'PrivateKey','Port':'80','SourceIPs':'10.1.1.1:8000'}]" |
 
 
 
@@ -1695,7 +1695,7 @@ IPMonitorDataSetType节点参数说明
 | IP       | String                 | 是    | 高防IP地址                                   |
 | IPUserID | String                 | 否    | IP地址隶属的二级用户ID                            |
 | UUID     | String                 | 是    | 配置信息的唯一标识符                               |
-| Configs  | SevenLayerAntiConfig[] | 是    | 七层防护配置，字符串内包含键值对的配置信息<br>并且需要转义，转义方法同URL<br>配置示例：<br>"[{'Type':'Site','Domain':'antiddos.api-test.kaopuyun.com','Cname':'antiddos.api-test.kaopuyun.com','Protocol':'Http', 'PublicKey':'PublicKey','PrivateKey':'PrivateKey','Port':'80','SourceIPs':'10.1.1.1:8000'}]" |
+| Configs  | SevenLayerAntiConfig[] | 是    | 七层防护配置，字符串内包含键值对的配置信息<br>并且需要转义，转义方法同URL<br>配置示例：<br>"[{'Type':'Site','Domain':'antiddos.api-test.youdomain.com','Cname':'antiddos.api-test.youdomain.com','Protocol':'Http', 'PublicKey':'PublicKey','PrivateKey':'PrivateKey','Port':'80','SourceIPs':'10.1.1.1:8000'}]" |
 
 
 

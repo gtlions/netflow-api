@@ -38,10 +38,10 @@ class apitest():
         # self.AccessKeySecret = 'xiddfgJDansKdfAdf'  # 线下
 
         self.local_url = 'http://127.0.0.1:8000'
-        self.dev_url = 'http://antiddos.api-test.kaopuyun.com'
-        self.prod_url = 'http://antiddos.api.kaopuyun.com'
+        self.dev_url = 'http://antiddos.api-test.youdomain.com'
+        self.prod_url = 'http://antiddos.api.youdomain.com'
 
-        # self.baseurl = 'https://api.kaopuyun.com' #cdn
+        # self.baseurl = 'https://api.youdomain.com' #cdn
 
     def sign_request(self, parame):
         hashed = hmac.new(self.AccessKeySecret.encode('utf-8'), parame.encode('utf-8'), digestmod=sha1)
@@ -344,7 +344,7 @@ class apitest():
         parames['Action'] = 'CreateIPSevenLayerAntiConfig'
         parames['IP'] = '27.148.196.94'  # '27.148.158.136'
         parames['Configs'] = self.res(
-            "[{'Type':'Site','Domain':'xiaohua.kaopuyun.com','Cname':'antiddos.api-test.kaopuyun.com','Protocol':'HTTP','Port':'80','SourceIPs':'10.1.1.1:800,10.1.1.99'}]")
+            "[{'Type':'Site','Domain':'xiaohua.youdomain.com','Cname':'antiddos.api-test.youdomain.com','Protocol':'HTTP','Port':'80','SourceIPs':'10.1.1.1:800,10.1.1.99'}]")
         parame = sorted(list(parames.items()), key=lambda d: d[0])
         str_url_bgp = 'GET&/ip&' + urllib.parse.urlencode(parame)
         print((parames['Action']))
@@ -361,7 +361,7 @@ class apitest():
         parames['IP'] = '27.148.196.94'
         parames['UUID'] = 'SLBSevenLayer-048ec746-331a-11e8-a935-16167465338b'
         parames['Configs'] = self.res(
-            "[{'Type':'Site','Domain':'api-test.kaopuyun.com','Cname':'antiddos.api-test.kaopuyun.com','Protocol':'HTTP','Port':'80','SourceIPs':'1.2.3.4'}]")
+            "[{'Type':'Site','Domain':'api-test.youdomain.com','Cname':'antiddos.api-test.youdomain.com','Protocol':'HTTP','Port':'80','SourceIPs':'1.2.3.4'}]")
         parame = sorted(list(parames.items()), key=lambda d: d[0])
         str_url_bgp = 'GET&/ip&' + urllib.parse.urlencode(parame)
         print((parames['Action']))
